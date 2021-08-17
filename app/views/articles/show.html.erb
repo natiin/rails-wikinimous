@@ -1,0 +1,11 @@
+<div>
+  <p><%= @article.title%></p>
+  <p><%= @article.content%></p>
+  <button><%= link_to "Delete #{@article.title}",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></button>
+<button><%= link_to "back", articles_path %></button>
+ <button><%= link_to "edit", edit_article_path %></button>
+
+</div>
